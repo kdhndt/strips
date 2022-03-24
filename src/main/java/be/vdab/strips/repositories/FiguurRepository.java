@@ -19,7 +19,7 @@ public class FiguurRepository {
     }
 
     public List<Figuur> findAll() {
-        var sql = "select id from figuren order by naam";
+        var sql = "select id, naam from figuren order by naam";
         return template.query(sql, figuurRowMapper);
     }
 }
